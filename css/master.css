@@ -1,0 +1,197 @@
+/* Elements generaux */
+
+html {
+  height: 100%;
+
+  /* On défini quelques variables pour pouvoir changer
+  de couleur plus facilement */
+
+  --color1: rgb(102, 102, 102);
+  --color2: rgb(153, 153, 153);
+  --color3: rgba(51, 51, 51, 0.7);
+  --contour-color: rgb(255, 255, 255);
+  --contour-color2: rgb(0, 0, 0);
+}
+
+body {
+  margin: 0;
+  background: url("../images/background.jpg") no-repeat center fixed;
+  background-size: cover;
+
+  /* Par défaut on utilise Arial */
+  font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li, i, img {
+  /* Tous les textes sont blancs */
+  color: white;
+}
+
+ul {
+  /* On ne veut pas de points dégueulasses devant
+  les éléments des listes */
+  list-style: none;
+}
+
+/* Entete */
+
+header {
+  background-color: var(--color1);
+  border-bottom: 3px solid var(--contour-color);
+  box-shadow: 0px 0px 3px 0px;
+}
+
+#top-page {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -120px;
+}
+
+
+#top-page > a {
+  /* "#top-page > a" fait référence au logo cliquable */
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+/* bar de navigation en haut a droite */
+
+nav {
+  display: flex;
+  padding: 15px;
+  background-color: var(--color2);
+  border-radius: 0px 0px 0px 25px;
+  border-bottom: 2px solid var(--contour-color);
+  border-left: 2px solid var(--contour-color);
+}
+
+nav a {
+  margin-right: 15px;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  /* Lors du survol des éléments de la barre de
+  navigation, on change leur couleur */
+  color: var(--color3);
+  transition-duration: 0.3s;
+}
+
+/* ligne de points */
+
+#dot-line {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: 155px;
+}
+
+.dot-set {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dot {
+  background-color: var(--color2);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--contour-color);
+  box-shadow: 0px 0px 3px 0px;
+}
+
+/* previsualisation des consoles */
+
+.gen-preview {
+  /* On défini l'opacité à 0 pour masquer par défaut
+  les consoles en prévisualisation */
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: -120px;
+}
+
+.console-example {
+  width: 80px;
+  height: 80px;
+  padding: 20px;
+  background-color: var(--color1);
+  border: 1px solid var(--contour-color2);
+  border-radius: 15px;
+}
+
+.dot-set:hover .gen-preview {
+  /* Lors du survol des points, on change l'opacité
+  et la position des consoles en prévisualisation */
+  transition-duration: 0.3s;
+  opacity: 1;
+  top: 0px;
+}
+
+.dot-set:hover .dot {
+  /* Lors du survol d'un point, on change sa couleur */
+  background-color: var(--color1);
+}
+
+/* section general (contenu du site) */
+
+section {
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  padding-top: 2%;
+  border-right: 2px solid var(--color1);
+  border-left: 2px solid var(--color1);
+  border-bottom: 2px solid var(--color1);
+  border-radius: 0px 0px 20px 20px;
+  background-color: var(--color3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 700px;
+}
+
+article {
+  width: 95%;
+}
+
+/* bas de page */
+
+footer {
+  margin-right: 5%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  border-top: 2px solid var(--color1);
+  border-right: 2px solid var(--color1);
+  border-left: 2px solid var(--color1);
+  background: var(--color3);
+  border-radius: 20px 20px 0px 0px;
+}
+
+/* formes utiles */
+
+.up-arrow {
+  /* Ce code dessine une flêche tournée vers
+  le haut */
+
+  width: 0px;
+  height: 0px;
+  border-bottom: 15px solid var(--color1);
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  margin-top: 10px auto;
+}
+
+.up-move-arrow:hover .up-arrow {
+  /* Lors du survole d'une flêche, on change sa couleur */
+  border-bottom: 15px solid var(--color2);
+  transition-duration: 0.3s;
+}
