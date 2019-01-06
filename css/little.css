@@ -33,6 +33,7 @@ header {
 /* bar de navigation en haut a droite */
 
 nav {
+  justify-content: center;
   width: 100%;
   padding-left: 0;
   padding-right: 0;
