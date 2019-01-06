@@ -1,3 +1,10 @@
+/* On définit les polices a utiliser */
+@font-face {
+  font-family: "Joystick";
+  src: url("../fonts/Joystick.otf");
+}
+
+
 /* Elements generaux */
 
 html {
@@ -7,10 +14,10 @@ html {
   de couleur plus facilement */
 
   --color1: rgb(102, 102, 102);
-  --color2: rgb(153, 153, 153);
+  /*--color2: rgb(153, 153, 153);*/
+  --color2: rgb(151, 86, 43);
   --color3: rgba(51, 51, 51, 0.7);
   --contour-color: rgb(255, 255, 255);
-  --contour-color2: rgb(0, 0, 0);
 }
 
 body {
@@ -19,7 +26,8 @@ body {
   background-size: cover;
 
   /* Par défaut on utilise Arial */
-  font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+  font-family: Joystick, Arial, Helvetica, "Liberation Sans", FreeSans,
+    sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, li, i, img {
@@ -27,10 +35,20 @@ h1, h2, h3, h4, h5, h6, p, a, li, i, img {
   color: white;
 }
 
+p, a {
+  font-size: 1.3em;
+}
+
 ul {
   /* On ne veut pas de points dégueulasses devant
   les éléments des listes */
   list-style: none;
+}
+
+a:hover {
+  /* Par défaut, tous les liens deviennent orange une fois survolés */
+  color: var(--color2);
+  transition-duration: 0.3s;
 }
 
 /* Entete */
@@ -44,14 +62,19 @@ header {
 #top-page {
   display: flex;
   justify-content: space-between;
-  margin-bottom: -120px;
+  align-items: flex-start;
+  margin-bottom: -130px;
 }
 
 
 #top-page > a {
   /* "#top-page > a" fait référence au logo cliquable */
-  margin-top: 20px;
-  margin-left: 50px;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+
+#top-page > a > img {
+  width: 300px;
 }
 
 /* bar de navigation en haut a droite */
@@ -93,6 +116,11 @@ nav a:hover {
   align-items: center;
 }
 
+.dot-set p {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
 .dot {
   background-color: var(--color2);
   border-radius: 50%;
@@ -119,7 +147,7 @@ nav a:hover {
   height: 80px;
   padding: 20px;
   background-color: var(--color1);
-  border: 1px solid var(--contour-color2);
+  border: 1px solid var(--contour-color);
   border-radius: 15px;
 }
 
@@ -135,6 +163,7 @@ nav a:hover {
   /* Lors du survol d'un point, on change sa couleur */
   background-color: var(--color1);
   box-shadow: 0px 0px 3px 0px;
+  transition-duration: 0.3s;
 }
 
 /* section general (contenu du site) */
@@ -174,6 +203,15 @@ footer {
   border-left: 2px solid var(--color1);
   background: var(--color3);
   border-radius: 20px 20px 0px 0px;
+}
+
+footer > img {
+  /* Logo de pied de page */
+  width: 200px;
+}
+
+footer p {
+  margin: 0;
 }
 
 /* formes utiles */
