@@ -25,7 +25,7 @@ body {
   background: url("../images/background.jpg") no-repeat center fixed;
   background-size: cover;
 
-  /* Par défaut on utilise Arial */
+  /* Par défaut on utilise Joystick */
   font-family: Joystick, Arial, Helvetica, "Liberation Sans", FreeSans,
     sans-serif;
 }
@@ -212,6 +212,10 @@ footer > img {
 
 footer p {
   margin: 0;
+}
+
+footer ul {
+  padding: 0;
 }
 
 /* formes utiles */

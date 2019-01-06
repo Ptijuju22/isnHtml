@@ -1,0 +1,119 @@
+/* Ce fichier css est utilisé par les petits appareils. Ici on ne fait
+que modifier ou ajouter des propriétés qui viendront se superposer à celles
+définies dans le fichier css principal */
+
+p, a {
+  font-size: 1.3em;
+}
+
+/* Entete */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#top-page {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+#top-page > a {
+  margin-left: 0;
+  width: 90%;
+}
+
+#top-page > a > img {
+  width: 100%;
+}
+
+/* bar de navigation en haut a droite */
+
+nav {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0 0 0 0;
+  border-left: 0;
+}
+
+/* ligne de points */
+
+#dot-line {
+  flex-wrap: wrap;
+  top: 0;
+  width: 90%;
+}
+
+.dot-set {
+  flex-direction: row-reverse;
+  margin-bottom: 5px;
+}
+
+.dot-set p {
+  margin-left: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* previsualisation des consoles */
+
+.gen-preview {
+  top: 0;
+  width: 0;
+  height: 0;
+}
+
+.console-example {
+  width: 0;
+  height: 0;
+  padding: 0;
+}
+
+.dot-set:hover .gen-preview {
+  transition-duration: 0;
+  opacity: 0;
+}
+
+/* section general (contenu du site) */
+
+section {
+  padding-top: 5%;
+}
+
+section p {
+  font-size: 1em;
+}
+
+article {
+  width: 95%;
+}
+
+/* bas de page */
+
+footer {
+  margin: 0;
+  border-radius: 0 0 0 0;
+  border-left: 0;
+  border-right: 0;
+  width: 100%;
+  align-items: flex-start;
+}
+
+footer li {
+  display: flex;
+  justify-content: center;
+}
+
+footer p, footer a {
+  font-size: 1em;
+  text-align: center;
+}
+
+footer > img {
+  width: 100px;
+  margin-top: 70px;
+}
