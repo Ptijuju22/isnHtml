@@ -30,7 +30,7 @@ body {
     sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, li, i, img {
+h1, h2, h3, h4, h5, h6, p, a, li, i, img, tr {
   /* Tous les textes sont blancs */
   color: white;
 }

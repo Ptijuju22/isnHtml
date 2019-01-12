@@ -1,10 +1,13 @@
-#image_console_7
-{
-	width: 300px;
-	height: 300px;
-}
 
 #titre_principal
 {
 	font-size: 8em;
+}
+
+aside
+{
+	background-color: rgb(140, 140, 140);
+	border: solid black 2px;
+	border-radius: 5px;
+	padding: 5px;
 }
