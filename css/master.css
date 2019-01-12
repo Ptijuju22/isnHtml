@@ -22,6 +22,7 @@ html {
 
 body {
   margin: 0;
+  /* On défini le fond du site */
   background: url("../images/background.jpg") no-repeat center fixed;
   background-size: cover;
 
@@ -35,8 +36,24 @@ h1, h2, h3, h4, h5, h6, p, a, li, i, img, tr {
   color: white;
 }
 
+/* On défini quelques tailles de textes */
+
 p, a {
   font-size: 1.3em;
+}
+
+p a {
+  /* "p a" fait référence aux liens qui se trouve dans un paragraphe */
+  /* Il faut éviter d'augmenter leur taille */
+  font-size: 0.9em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.2em;
 }
 
 ul {
@@ -54,21 +71,28 @@ a:hover {
 /* Entete */
 
 header {
+  /* On change la couleur de l'entête, on applique une petite bordure en bas
+  et une ombre légère en dessous */
   background-color: var(--color1);
   border-bottom: 3px solid var(--contour-color);
   box-shadow: 0px 0px 3px 0px;
 }
 
 #top-page {
+  /* Haut de l'entête (Logo et menu de navigation)*/
+  /* display: flex permet de disposer les éléments en ligne */
   display: flex;
+  /* space-between permet d'espacer les éléments */
   justify-content: space-between;
+  /* on aligne les éléments en partant de la gauche */
   align-items: flex-start;
+  /* On réduit l'espace en bas sinon l'entête est trop haute */
   margin-bottom: -130px;
 }
 
 
 #top-page > a {
-  /* "#top-page > a" fait référence au logo cliquable */
+  /* "#top-page > a" fait référence au lien du logo */
   margin-top: 10px;
   margin-left: 40px;
 }
@@ -80,10 +104,15 @@ header {
 /* bar de navigation en haut a droite */
 
 nav {
+  /* Menu de navigation */
+  /* on dispose les éléments en ligne (car en colonne par défaut) */
   display: flex;
   padding: 15px;
+  /* on applique un joli orange en fond */
   background-color: var(--color2);
+  /* on défini que le coins inférieur droit doit être arrondi de 25 pixels */
   border-radius: 0px 0px 0px 25px;
+  /* On dessine des bordures blanches en bas et a gauche */
   border-bottom: 2px solid var(--contour-color);
   border-left: 2px solid var(--contour-color);
 }
@@ -104,13 +133,18 @@ nav a:hover {
 /* ligne de points */
 
 #dot-line {
+  /* on dispose les points en ligne avec flex */
   display: flex;
+  /* On laisse de l'espace entre les points */
   justify-content: space-around;
+  /* On descend les points de 155 pixels sinon il ne sont pas alignés avec la
+  bordure de l'entête */
   position: relative;
   top: 155px;
 }
 
 .dot-set {
+  /* ensemble année+point+flêche+console */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -122,11 +156,18 @@ nav a:hover {
 }
 
 .dot {
+  /* On dessine un point a l'aide de "border-radius: 50%" */
   background-color: var(--color2);
   border-radius: 50%;
   width: 30px;
   height: 30px;
   border: 2px solid var(--contour-color);
+}
+
+#dot-clicked {
+  /* Le point de la génération en cours est gris alors que les autres sont
+  oranges */
+  background-color: var(--color1)
 }
 
 /* previsualisation des consoles */
@@ -138,11 +179,14 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* On remonte de 120 pixels la console pour que, une fois survolé on crée une
+  animation de descente */
   position: relative;
   top: -120px;
 }
 
 .console-example {
+  /* Fait référence a l'image des consoles en prévisualisation */
   width: 80px;
   height: 80px;
   padding: 20px;
@@ -167,27 +211,71 @@ nav a:hover {
 }
 
 
-/* section general (contenu du site) */
+/* section générale (contenu du site) */
 
 section {
+  /* On défini quelques marges autour de la section */
   margin-right: 5%;
   margin-left: 5%;
   margin-bottom: 5%;
-  padding-top: 2%;
+  /* On laisse aussi des marges intérieurs pour éviter que les éléments soit
+  collés aux bords de la section, sauf en bas pour que la flêche se colle à la
+  bordure */
+  padding: 2%;
+  padding-bottom: 0;
+  /* On déini des bordures grises autour */
   border-right: 2px solid var(--color1);
   border-left: 2px solid var(--color1);
   border-bottom: 2px solid var(--color1);
   border-radius: 0px 0px 20px 20px;
   background-color: var(--color3);
+  /* On utilise flex pour disposer les éléments en colonne et centrés */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  /* On défini une hauteur minimum pour être sûr que le pied de page reste collé
+  bas de la page */
   min-height: 700px;
 }
 
-article {
-  width: 95%;
+h1 {
+  margin-bottom: 5px;
+}
+
+.console-nav {
+  /* Petit menu pour naviguer entre les consoles de la pages */
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+  margin-bottom: 70px;
+}
+
+.console-nav li {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.console-desc {
+  /* Fait référence à une console */
+  /* On utilise flex pour disposer les éléments en ligne */
+  display: flex;
+  margin-bottom: 65px;
+}
+
+.console-video {
+  /* bordures autour des vidéos et taille */
+  border-radius: 30px 30px 30px 30px;
+  border: 2px solid var(--contour-color);
+  width: 560px;
+  height: 315px;
+}
+
+aside {
+  display: flex;
+  align-items: center;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 /* bas de page */
@@ -222,14 +310,32 @@ footer ul {
 /* formes utiles */
 
 .up-arrow {
-  /* Ce code dessine une flêche tournée vers
-  le haut */
-
+  /* Ce code dessine une flêche grise tournée vers le haut */
   width: 0px;
   height: 0px;
   border-bottom: 15px solid var(--color1);
   border-right: 12px solid transparent;
   border-left: 12px solid transparent;
+  margin-top: 10px auto;
+}
+
+.left-arrow {
+  /* Ce code dessine une flêche blanche tournée vers la gauche */
+  width: 0px;
+  height: 0px;
+  border-right: 15px solid var(--contour-color);
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  margin-top: 10px auto;
+}
+
+.right-arrow {
+  /* Ce code dessine une flêche blanche tournée vers la gauche */
+  width: 0px;
+  height: 0px;
+  border-left: 15px solid var(--contour-color);
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
   margin-top: 10px auto;
 }
 
