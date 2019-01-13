@@ -1,13 +1,22 @@
-
-#titre_principal
-{
-	font-size: 8em;
-}
-
 aside
 {
 	background-color: rgb(140, 140, 140);
 	border: solid black 2px;
 	border-radius: 5px;
-	padding: 5px;
+}
+
+article h2, #titre_pricipal
+{
+	color: rgb(151, 86, 43);
+}
+
+#info
+{
+	display: flex;
+}
+
+#titre_principal
+{
+	font-size: 3em;
+	color: rgb(151, 86, 43);
 }
