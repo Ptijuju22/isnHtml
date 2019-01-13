@@ -3,3 +3,19 @@
 	border: solid rgb(151, 86, 43) 3px;
 	border-radius: 5px;
 	padding:3px;
+}
+
+#liste_console
+{
+	text-align: center;
+}
+
+#titre_principal
+{
+	font-size: 2em;
+}
+
+.all_infos
+{
+	display: flex;
+}
