@@ -1,9 +1,9 @@
-### Game History
+# Game History
 
-# Travail d'ISN
+## Travail d'ISN
 Création d'un site web à l'aide d'HTML et de CSS pour un projet noté d'ISN.
 
-# Notre projet
+## Notre projet
 Thème : L'évolution des consoles de jeux.
 Notre site est composé de 11 pages (*oula la ça fait beaucoup laul*) :
   - Accueil (index.html)
@@ -18,7 +18,7 @@ Notre site est composé de 11 pages (*oula la ça fait beaucoup laul*) :
   - 7ère génération de consoles (gen7.html)
   - 8ère génération de consoles (gen8.html)
 
-# Collaborateurs
+## Collaborateurs
 Nous sommes 3 gentils élèves à travailler sur ce projet ~~colossal~~:
   - Gabriel Nény
   - Colin Noiret
