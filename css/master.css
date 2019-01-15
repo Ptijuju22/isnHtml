@@ -239,6 +239,10 @@ section {
   min-height: 700px;
 }
 
+section p {
+  text-align: justify;
+}
+
 h1 {
   margin-bottom: 5px;
 }
