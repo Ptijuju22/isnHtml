@@ -93,6 +93,27 @@ article {
   width: 95%;
 }
 
+.console-nav {
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.console-desc {
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.console-video {
+  width: 100%;
+  height: auto;
+}
+
+aside {
+  flex-direction: column;
+  /*width: inherit;*/
+}
+
 /* bas de page */
 
 footer {
@@ -117,4 +138,24 @@ footer p, footer a {
 footer > img {
   width: 100px;
   margin-top: 70px;
+}
+
+.left-arrow {
+  /* Ce code dessine une flêche blanche tournée vers la gauche */
+  width: 0px;
+  height: 0px;
+  border-bottom: 15px solid var(--contour-color);
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  margin-top: 10px auto;
+}
+
+.right-arrow {
+  /* Ce code dessine une flêche blanche tournée vers la gauche */
+  width: 0px;
+  height: 0px;
+  border-top: 15px solid var(--contour-color);
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  margin-top: 10px auto;
 }
