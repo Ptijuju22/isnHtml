@@ -45,7 +45,7 @@ p, a {
 p a {
   /* "p a" fait référence aux liens qui se trouve dans un paragraphe */
   /* Il faut éviter d'augmenter leur taille */
-  font-size: 0.9em;
+  font-size: 0.95em;
 }
 
 h1 {
@@ -239,6 +239,10 @@ section {
   min-height: 700px;
 }
 
+article {
+  width: 100%;
+}
+
 section p {
   text-align: justify;
 }
@@ -285,6 +289,11 @@ aside {
   align-items: center;
   margin-left: 2%;
   margin-right: 2%;
+}
+
+.list-about p, .list-about a {
+  margin: 0;
+  text-decoration: none;
 }
 
 /* bas de page */
