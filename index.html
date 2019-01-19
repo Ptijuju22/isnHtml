@@ -2,16 +2,156 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-
-    <title>Zizou le sang WOULA SA MERE</title>
-
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" type="text/css" href="css/master.css">
+    <link rel="stylesheet" media="screen and (max-aspect-ratio: 1/1)" href="css/little.css" />
+    <title>Game History</title>
   </head>
   <body>
-    <h1>Bienvenue sur la page secrète</h1>
-    <p>Bravo tu as réussi à trouver cette page. comme tu viens de le constater cette page est Secrète. BOUH! <br>
-    AHAHA LOL C'est une petite boutade tu constates également que la page est moche c'est tout à fait normal puisque je n'ai pas encore appris le css  <br>
-   </p>
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/vgR4IN2beBo?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- Entête -->
+
+    <header>
+      <!-- Barre de navigation et logo -->
+      <div id="top-page">
+        <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+
+        <!-- Barre de navigation -->
+        <nav>
+            <a href="#">Accueil</a>
+            <a href="all_consoles.html">Toutes les consoles</a>
+            <a href="about.html">A propos</a>
+        </nav>
+      </div>
+
+      <!-- Ligne de points (1 point par génération de console) -->
+      <div id="dot-line">
+        <div class="dot-set">
+          <p>1972</p>
+          <a href="gen1.html" class="dot"></a>
+          <!-- Cette partie est caché par défaut, elle n'est visible que lorsque
+          la souris survole le point associé -->
+          <div class="gen-preview">
+            <div class="up-arrow"></div>
+            <img src="images/gen1.png" alt="Console de 1ère génération" class="console-example">
+          </div>
+        </div>
+
+        <div class="dot-set">
+          <p>1976</p>
+          <a href="gen2.html" class="dot"></a>
+          <div class="gen-preview">
+            <div class="up-arrow"></div>
+            <img src="images/gen2.png" alt="Console de 2ème génération" class="console-example">
+          </div>
+        </div>
+
+        <div class="dot-set">
+          <p>1983</p>
+          <a href="gen3.html" class="dot"></a>
+          <div class="gen-preview">
+            <div class="up-arrow"></div>
+            <img src="images/gen3.png" alt="Console de 3ème génération" class="console-example">
+          </div>
+        </div>
+
+        <div class="dot-set">
+          <p>1987</p>
+          <a href="gen4.html" class="dot"></a>
+          <div class="gen-preview">
+            <div class="up-arrow"></div>
+            <img src="images/gen4.png" alt="Console de 4ème génération" class="console-example">
+          </div>
+        </div>
+
+        <div class="dot-set">
+          <p>1993</p>
+          <a href="gen5.html" class="dot"></a>
+          <div class="gen-preview">
+            <div class="up-arrow"></div>
+            <img src="images/gen5.png" alt="Console de 5ème génération" class="console-example">
+          </div>
+        </div>
+
+        <div class="dot-set">
+          <p>1998</p>
+          <a href="gen6.html" class="dot"></a>
+          <div class="gen-preview">
+            <div class="up-arrow"></div>
+            <img src="images/gen6.png" alt="Console de 6ème génération" class="console-example">
+          </div>
+        </div>
+
+        <div class="dot-set">
+          <p>2004</p>
+          <a href="gen7.html" class="dot"></a>
+          <div class="gen-preview">
+            <div class="up-arrow"></div>
+            <img src="images/gen7.png" alt="Console de 7ème génération" class="console-example">
+          </div>
+        </div>
+
+        <div class="dot-set">
+          <p>2011</p>
+          <a href="gen8.html" class="dot"></a>
+          <div class="gen-preview">
+            <div class="up-arrow"></div>
+            <img src="images/gen8.png" alt="Console de 8ème génération" class="console-example">
+          </div>
+        </div>
+
+      </div>
+
+    </header>
+
+<!-- Contenu du site -->
+
+    <section>
+      <h1>Game History</h1>
+      <article>
+        <h2>8 générations de consoles</h2>
+        <p>
+          Depuis 1972, 8 générations de consoles se sont succédées, apportant à
+          chaque fois sont lot de nouveauté en terme d'innovation technologique.
+          L'histoire commence avec des consoles simplistes entourées d'une coque
+          généralement en bois, permettant de ne jouer qu'à un seul jeu, à
+          l'aide de commandes à un seul bouton. Au fil du temps, les
+          technologies ont évoluées pour attirer toujours plus de joueurs. De
+          nombreuses sociétés se sont succédées sur ce marché naissant, flairant
+          un potentiel économique important. Certaines d'entre elles sont
+          restées et sont devenues leader du marché, d'autres se sont faites
+          dépassées par une concurrence toujours plus agressive. Ce site retrace
+          l'histoire du jeu vidéo à travers les consoles phares des 8 dernières
+          générations.
+        </p>
+      </article>
+
+      <!-- Ce lien permet de remonter en haut de la page -->
+      <a href="#top-page" class="up-move-arrow"><div class="up-arrow"></div></a>
+    </section>
+
+<!-- Pied de page -->
+
+    <footer>
+      <!-- Un menu de navigation en bas de page permet de naviguer sans avoir
+      à remonter jusqu'a la barre de navigation -->
+      <ul>
+        <li><h3>Navigation</h3></li>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="all_consoles.html">Toutes les consoles</a></li>
+        <li><a href="about.html">A propos</a></li>
+      </ul>
+
+      <img src="images/logo.png" alt="Logo">
+
+      <!-- Les créateurs du site -->
+      <ul>
+        <li><h3>Developpeurs</h3></li>
+
+        <li><p>Gabriel Nény</p></li>
+        <li><p>Colin Noiret</p></li>
+        <li><p>Julien Dubois</p></li>
+      </ul>
+    </footer>
   </body>
 </html>
