@@ -86,8 +86,6 @@ header {
   justify-content: space-between;
   /* on aligne les éléments en partant de la gauche */
   align-items: flex-start;
-  /* On réduit l'espace en bas sinon l'entête est trop haute */
-  margin-bottom: -130px;
 }
 
 
@@ -132,84 +130,39 @@ nav a:hover {
 
 /* ligne de points */
 
-#dot-line {
-  /* on dispose les points en ligne avec flex */
+.chrono-line {
+  margin: 0;
+  padding: 0;
   display: flex;
-  /* On laisse de l'espace entre les points */
   justify-content: space-around;
-  /* On descend les points de 155 pixels sinon il ne sont pas alignés avec la
-  bordure de l'entête */
-  position: relative;
-  top: 155px;
-}
-
-.dot-set {
-  /* ensemble année+point+flêche+console */
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-.dot-set p {
-  margin-top: 0;
-  margin-bottom: 5px;
+.chrono-date > a {
+  display: inline;
 }
 
-.dot {
-  /* On dessine un point a l'aide de "border-radius: 50%" */
-  background-color: var(--color2);
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  border: 2px solid var(--contour-color);
-}
-
-#dot-clicked {
-  /* Le point de la génération en cours est gris alors que les autres sont
-  oranges */
-  background-color: var(--color1)
-}
-
-/* previsualisation des consoles */
-
-.gen-preview {
-  /* On défini l'opacité à 0 pour masquer par défaut
-  les consoles en prévisualisation */
-  opacity: 0;
+.chrono-date {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  /* On remonte de 120 pixels la console pour que, une fois survolé on crée une
-  animation de descente */
-  position: relative;
-  top: -120px;
+  flex-direction: column;
 }
 
-.console-example {
-  /* Fait référence a l'image des consoles en prévisualisation */
-  width: 80px;
-  height: 80px;
+.chrono-console {
+  display: none;
+  width: 100px;
+  background-color: var(--color-1);
+  border-radius: 0 0 10px 10px;
+  border-bottom: 1px solid var(--contour-color);
+  border-left: 1px solid var(--contour-color);
+  border-right: 1px solid var(--contour-color);
   padding: 20px;
-  background-color: var(--color1);
-  border: 1px solid var(--contour-color);
-  border-radius: 15px;
 }
 
-.dot-set:hover .gen-preview {
-  /* Lors du survol des points, on change l'opacité
-  et la position des consoles en prévisualisation */
-  transition-duration: 0.3s;
-  opacity: 1;
-  top: 0px;
+.chrono-date:hover .chrono-sub > img {
+  display: inline-block;
+  position: absolute;
 }
-
-.dot-set:hover .dot {
-  /* Lors du survol d'un point, on change sa couleur */
-  background-color: var(--color1);
-  box-shadow: 0px 0px 3px 0px;
-  transition-duration: 0.3s;
-}
-
 
 /* section générale (contenu du site) */
 
