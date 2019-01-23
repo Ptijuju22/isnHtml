@@ -114,6 +114,10 @@ aside {
   /*width: inherit;*/
 }
 
+.gen-desc > article {
+  width: 100%;
+}
+
 /* bas de page */
 
 footer {

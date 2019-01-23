@@ -304,6 +304,7 @@ aside {
 .gen-desc {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
   width: 100%;
@@ -316,6 +317,7 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 400px;
 }
 
 .gen-desc > article > aside {
